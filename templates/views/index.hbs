@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Members Only</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body>
+       
+        <div class="cont">
+            <div class="form sign-in">
+                <form action="/api/auth/login" method="post">
+                    <h2>Sign In</h2>
+                    <label>
+                        <span>Email Address</span>
+                        <input type="email" name="username" id="email" required>
+                    </label>
+                    <label>
+                        <span>Password</span>
+                        <input type="password" name="password" id="password" required>
+                    </label>
+                    <button class="submit" >Sign In</button>
+                </form>
+                <p class="forgot-pass">Forgot Password ?</p>
+
+                <div class="social-media">
+                    <ul>
+                        <li><img src="../images/facebook.png"></li>
+                        <li><img src="../images/twitter.png"></li>
+                        <li><img src="../images/linkedin.png"></li>
+                        <li><img src="../images/instagram.png"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sub-cont">
+                <div class="img">
+                    <div class="img-text m-up">
+                        <h2>Create New Account</h2>
+                        <p>Please Click Sign up Button</p>
+                    </div>
+                    <div class="img-text m-in">
+                        <h2>Login Here</h2>
+                        <p>If you already has an account, just sign in. We've
+                            missed you!</p>
+                    </div>
+                    <div class="img-btn">
+                        <span class="m-up">Sign Up</span>
+                        <span class="m-in">Sign In</span>
+                    </div>
+                </div>
+                <div class="form sign-up">
+                    <form action="/register" method="post">
+                        <h2>Sign Up</h2>
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name"  required>
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="text" name="email"   required>
+                        </label>
+                        <label>
+                            <span>Contact Number</span>
+                            <input type="text" name="number"   >
+                        </label>
+                        <label>
+                            <span>Password</span>
+                            <input type="password"
+                              name="password">
+                        </label>
+                        <button class="submit">Sign Up Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelector('.img-btn').addEventListener('click', function()
+	            {
+		            document.querySelector('.cont').classList.toggle('s-signup')
+	            }
+            );
+
+            function login(){
+                const pass=document.getElementById('password').value
+                const email=document.getElementById('email').value
+                console.log(pass)
+            }
+
+        </script>
+    </body>
+</html>
